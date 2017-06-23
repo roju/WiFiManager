@@ -638,6 +638,8 @@ void WiFiManager::handleWifiSave() {
   DEBUG_WM(F("Sent wifi save page"));
 
   connect = true; //signal ready to connect/reset
+
+  WiFiManager::handleServerClose();
 }
 /** Handle shut down the server page */
 void WiFiManager::handleServerClose() {
