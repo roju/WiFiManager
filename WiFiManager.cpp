@@ -145,7 +145,8 @@ void WiFiManager::setupConfigPortal() {
 }
 
 boolean WiFiManager::autoConnect() {
-  String ssid = "ESP" + String(ESP.getChipId());
+  String ssid = "LLC-" + String(ESP.getChipId());
+  //String ssid = "LLC-" + String(ESP.getChipId()).substring(0, 5);
   return autoConnect(ssid.c_str(), NULL);
 }
 /* This is not very useful as there has been an assumption that device has to be
@@ -183,7 +184,7 @@ boolean WiFiManager::autoConnect(char const *apName, char const *apPassword) {
 }
 
 boolean  WiFiManager::startConfigPortal() {
-  String ssid = "ESP" + String(ESP.getChipId());
+  String ssid = "LLC-" + String(ESP.getChipId()).substring(0, 5);
   return startConfigPortal(ssid.c_str(),NULL);
 }
 
