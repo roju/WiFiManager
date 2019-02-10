@@ -145,7 +145,7 @@ void WiFiManager::setupConfigPortal() {
 }
 
 boolean WiFiManager::autoConnect() {
-  String ssid = "LCS-vPro3";
+  String ssid = "LCS";
   //String ssid = "LCS-" + String(ESP.getChipId());
   return autoConnect(ssid.c_str(), NULL);
 }
@@ -184,7 +184,7 @@ boolean WiFiManager::autoConnect(char const *apName, char const *apPassword) {
 }
 
 boolean  WiFiManager::startConfigPortal() {
-  String ssid = "LCS-vPro3";
+  String ssid = "LCS";
   //  + String(ESP.getChipId()).substring(0, 5);
   return startConfigPortal(ssid.c_str(),NULL);
 }
