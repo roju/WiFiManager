@@ -683,7 +683,6 @@ void WiFiManager::handleInfo() {
   page += _customHeadElement;
   page += FPSTR(HTTP_HEAD_END);
   page += F("<h2>WiFi Information</h2>");
-  page += F("Android app from <a href=\"https://play.google.com/store/apps/details?id=au.com.umranium.espconnect\">https://play.google.com/store/apps/details?id=au.com.umranium.espconnect</a> provides easier ESP WiFi configuration.<p/>");
   reportStatus(page);
   page += F("<h3>Device Data</h3>");
   page += F("<table class=\"table\">");
@@ -739,7 +738,6 @@ void WiFiManager::handleInfo() {
   page += F("<tr><td><a href=\"/scan\">/scan</a></td>");
   page += F("<td>Run a WiFi scan and return results in JSON format. Interface for programmatic WiFi configuration.</td></tr>");
   page += F("</table>");
-  page += F("<p/>More information about WiFiManager at <a href=\"https://github.com/kentaylor/WiFiManager\">https://github.com/kentaylor/WiFiManager</a>.");
   page += FPSTR(HTTP_END);
 
   server->send(200, "text/html", page);
